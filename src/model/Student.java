@@ -15,15 +15,12 @@ public class Student {
 
     public void inputStudent(Scanner scanner){
         id= ValidateUserInput.valueInputInteger(scanner,"Student's ID");
-        System.out.print("Enter Student's Name : ");
         scanner.nextLine();
-        name=scanner.nextLine();
-        System.out.print("Enter Student's Gender : ");
-        gender=scanner.nextLine();
+        name=ValidateUserInput.valueInputString(scanner," Student's Name ");
+        gender=ValidateUserInput.valueInputString(scanner," Student's Gender ");
         age=ValidateUserInput.valueInputInteger(scanner,"Student's Age");
         scanner.nextLine();
-        System.out.print("Enter Student's Classroom : ");
-        classroom=scanner.nextLine();
+        classroom=ValidateUserInput.valueInputString(scanner," Student's Classroom ");
         score=ValidateUserInput.valueInputFloat(scanner,"Student's Score");
         System.out.println("SUCCESSFULLY ADDED STUDENT TO THE SYSTEM");
         System.out.println("Press ENTER To Continue");
@@ -32,16 +29,13 @@ public class Student {
     }
     public void inputUpdateStudent(Scanner scanner,Integer id){
         this.id=id;
-        System.out.print("Enter Update Student's Name : ");
         scanner.nextLine();
-        name=scanner.nextLine();
-        System.out.print("Enter Update Student's Gender : ");
-        gender=scanner.nextLine();
-        age=ValidateUserInput.valueInputInteger(scanner,"Update Student's Age");
+        name=ValidateUserInput.valueInputString(scanner," Student's Name To Update");
+        gender=ValidateUserInput.valueInputString(scanner," Student's Gender To Update");
+        age=ValidateUserInput.valueInputInteger(scanner," Student's Age To Update");
         scanner.nextLine();
-        System.out.print("Enter Update Student's Classroom : ");
-        classroom=scanner.nextLine();
-        score=ValidateUserInput.valueInputFloat(scanner,"Update Student's Score");
+        classroom=ValidateUserInput.valueInputString(scanner," Student's Classroom To Update");
+        score=ValidateUserInput.valueInputFloat(scanner," Student's Score To Update");
         System.out.println("SUCCESSFULLY UPDATE STUDENT TO THE SYSTEM");
         System.out.println("Press ENTER To Continue");
         scanner.nextLine();

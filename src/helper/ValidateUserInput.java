@@ -35,6 +35,19 @@ public class ValidateUserInput {
             scanner.nextLine();
         }while (true);
     }
+    public static String valueInputString( Scanner scanner,String message){
+        do {
+            System.out.print("Enter "+message+" : ");
+            String input=null;
+            try {
+                input = scanner.nextLine();
+                Integer.parseInt(input);
+                System.out.println("Invalid input! Please enter a string without numbers.");
+            } catch (NumberFormatException e) {
+                return input;
+            }
+        }while (true);
+    }
     public static boolean isEmpty(String option){
         return option.isEmpty();
     }
